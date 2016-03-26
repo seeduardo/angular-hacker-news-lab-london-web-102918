@@ -24,17 +24,7 @@ angular
 						return PostsService.getPost($stateParams.id);
 					}
 				}
-			})
-			.state('user', {
-				url: '/user/:id',
-				templateUrl: 'views/user.html',
-				controller: 'UserController as user',
-				resolve: {
-					post: function ($stateParams, PostsService) {
-						return UserService.getUser($stateParams.id);
-					}
-				}
 			});
-
+		
 		$urlRouterProvider.otherwise('/top');
 	});
