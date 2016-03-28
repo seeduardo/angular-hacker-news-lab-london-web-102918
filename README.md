@@ -20,7 +20,7 @@
 
 To run the local dev server, you'll need to run `npm install` and then `node server.js`. This will run a local dev server at http://localhost:8080.
 
-HackerNews is a basic news site where people can post items and comment on them. Let's recreate some of it.
+HackerNews is a basic news site where people can post items and comment on them. Let's recreate some of it. [Take a look at it here.](https://news.ycombinator.com)
 
 Create a state for the "top stories".
 
@@ -29,6 +29,8 @@ We should then grab all the top stories from the URL `https://hacker-news.fireba
 Create a service, and a method to grab all the top stories. Then create a method to grab information about a single post by it's ID. This should hit `https://hacker-news.firebaseio.com/v0/item/{id}.json`.
 
 Display a list of 30 posts on the top stories, and put two links at the bottom to allow the user to change to the next/previous page. As we've already got the ~500 or so top stories, we can just slice a different chunk out of the array depending what page they're on instead of making a new request.
+
+The pagination is a bit different from normal pagination - normally, we'd request a new dataset from the server depending what page number we're on. However, we've already got all of the top stories so we just need to slice a different part of the array.
 
 Each top story should have it's URL displayed along with the amount of comments and the score.
 
