@@ -42,7 +42,7 @@ Create a component to display the comments - this should grab data from the URL 
 
 Each kid (comment) might have kids (comments) inside it - so each comment should actually call the comment component inside of it. This means we've got a recursive component - awesome!
 
-There are simple styles for you to use inside `index.html` to make it look pretty!
+There are simple styles for you to use inside `app.css` to make it look pretty!
 
 ## Resources
 
