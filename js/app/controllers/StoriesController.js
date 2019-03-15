@@ -6,7 +6,7 @@ function StoriesController(StoriesService) {
   StoriesService
     .getStories()
     .then(resp => {
-      ctrl.stories = resp
+      ctrl.stories = resp.data
     })
     .then(console.log(ctrl.stories))
 
